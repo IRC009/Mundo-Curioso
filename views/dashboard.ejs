@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://www.mundocurioso.website/assets/icons8-planeta-96.png" />
+    <link rel="stylesheet" href="https://www.mundocurioso.website/styles/main.css" />
+    <link rel="stylesheet" href="https://www.mundocurioso.website/styles/dashboard.css" />
+    <style>
+      .menu {
+        width: 40px;
+      }
+      @media screen and (max-width: 900px){
+        .main_section2_a{
+          width: 45%;
+          height: 320px;
+          margin: 0px;
+          margin-bottom: 30px;
+        }
+        .newpost_enlace{
+          margin: 0 auto;
+        }
+      }
+        
+      @media screen and (max-width: 580px){
+        .main_section2_a{
+          width: 100%;
+        }
+        .newpost_enlace {
+        font-size: 14px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav_list">
+        <div class="nav_list_li1">
+          <li><a href="https://www.mundocurioso.website/sobrenosotros">Sobre nosotros</a></li>
+          <li><a href="https://www.mundocurioso.website/contactos">Contacto</a></li>
+        </div>
+        <li class="nav_list_li2">
+          <a href="https://www.facebook.com/mundocurioso09" target="_blank"
+            >Facebook</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="header">
+      <header class="containerTitle">
+        <a href="https://www.mundocurioso.website/"><h1 class="containerTitle_title">Mundo Curioso</h1></a>
+        <img
+          src="https://www.mundocurioso.website/assets/Menu_icon_2_icon-icons.com_71856.svg"
+          alt="menu"
+          class="menu"
+          onclick="abrirMenu()"
+        />
+        <nav class="containerTitle_nav">
+          <ul class="containerTitle_nav_ul">
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Galería">Galería</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Maravillas">Maravillas</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Culturas">Culturas</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Historias">Historias</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/aturaleza">Naturaleza</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Ciencia">Ciencia</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Arte">Arte</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Gastronomia">Gastronomia</a>
+            </li>
+            <li class="containerTitle_nav_ul_li">
+              <a href="https://www.mundocurioso.website/categoria/Viajes">Viajes</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <section class="newpost">
+      <a class="newpost_enlace" href="https://www.mundocurioso.website/newpost">Nuevo Post</a>
+    </section>
+    <main class="main">
+      <% posts.forEach(element => { %>
+      <div href="https://www.mundocurioso.website/blogs/<%= element._id %>" class="main_section2_a">
+        <article class="main_section2_article">
+          <a href="https://www.mundocurioso.website/blogs/<%= element._id %>" class="main_section2_article_img">
+            <img
+              class="main_section2_article_img"
+              src="<%- element.img %>"
+              alt="<%- element.title %>"
+            />
+          </a>
+          <h3 class="main_section2_article_title"><%- element.title %></h3>
+          <div class="div">
+            <h3 class="main_section2_article_time">
+              <%- element.date.getDate() %> de <%-
+              meses[element.date.getMonth()] %> de <%-
+              element.date.getFullYear() %>
+            </h3>
+            <div class="enlaces_container">
+              <a
+                href="https://www.mundocurioso.website/editPost/<%=element._id%>"
+                class="main_section2_article_enlace editar"
+                >Editar</a
+              >
+              <a
+                id="<%= element._id %>"
+                class="main_section2_article_enlace eliminar"
+                >Eliminar</a
+              >
+            </div>
+          </div>
+        </article>
+      </div>
+      <% }) %>
+    </main>
+
+    <footer class="main_footer">
+      <h3 class="main_footer_h3">Mundo Curioso</h3>
+    </footer>
+    <nav class="containerTitle_nav_android">
+      <ul class="containerTitle_nav_ul containerTitle_nav_android">
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Galería">Galería</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Maravillas">Maravillas</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Culturas">Culturas</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Historias">Historias</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/aturaleza">Naturaleza</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Ciencia">Ciencia</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Arte">Arte</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Gastronomia">Gastronomia</a>
+        </li>
+        <li class="containerTitle_nav_ul_li">
+          <a href="https://www.mundocurioso.website/categoria/Viajes">Viajes</a>
+        </li>
+      </ul>
+      <img
+        src="https://www.mundocurioso.website/assets/letterx_83737.svg"
+        alt="X"
+        class="x"
+        onclick="cerrarMenu()"
+      />
+    </nav>
+    <script>
+      function abrirMenu() {
+        document
+          .querySelector(".containerTitle_nav_android")
+          .classList.add("active");
+        document.querySelector(".x").classList.add("xactive");
+      }
+      function cerrarMenu() {
+        document
+          .querySelector(".containerTitle_nav_android")
+          .classList.remove("active");
+        document.querySelector(".x").classList.remove("xactive");
+      }
+    </script>
+    <script src="https://www.mundocurioso.website/js/delete.js"></script>
+  </body>
+</html>

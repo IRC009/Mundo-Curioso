@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo Post</title>
+    <link rel="shortcut icon" href="https://www.mundocurioso.website/assets/icons8-planeta-96.png" />
+    <link rel="stylesheet" href="https://www.mundocurioso.website/styles/newpost.css" />
+  </head>
+  <body>
+    <h1 class="title">Nuevo Post</h1>
+    <form action="https://www.mundocurioso.website/newPost" method="post" class="form">
+      <div class="form__field">
+        <label class="form__label">Imagen</label>
+        <input type="text" name="img" class="form__input" />
+      </div>
+      <div class="form__field">
+        <label class="form__label">Título</label>
+        <input type="text" name="title" class="form__input" />
+      </div>
+      <div class="form__field">
+        <label class="form__label">Contenido</label>
+        <textarea name="content" class="form__textarea"></textarea>
+      </div>
+      <div class="form__field">
+        <label class="form__label">Etiquetas</label>
+        <input type="text" name="etiqueta" class="form__input" />
+      </div>
+      <div class="form__field">
+        <label class="form__label">Descripción</label>
+        <input type="text" name="description" class="form__input" />
+      </div>
+      <div class="form__field">
+        <label class="form__label">Autor</label>
+        <input type="text" name="author" class="form__input" />
+      </div>
+      <div class="form__field">
+        <label class="form__label">Palabras clave</label>
+        <input type="text" name="keywords" class="form__input" />
+      </div>
+      <div class="contenedor-botones">
+        <a href="https://www.mundocurioso.website/dashboard" class="volver">Volver</a>
+        <input type="submit" class="form__submit" value="Publicar"/>
+      </div>
+      
+    </form>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_section2_a {
+  margin-right: 10px;
+  margin-bottom: 30px;
+  width: 30%;
+}
+.main_section2_article {
+  height: 300px;
+  width: 100%;
+}
+.container_time {
+  display: flex;
+}
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+.enlaces_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+.main_section2_article_enlace {
+  display: inline-block;
+  padding: 6px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.editar {
+  color: #fff;
+  background-color: #00a878;
+}
+.eliminar {
+  background-color: #d00000;
+  color: #fff;
+  cursor: pointer;
+}
+.newpost {
+  max-width: 1400px;
+  margin: 10px auto;
+  margin-bottom: 0;
+  padding: 10px 80px;
+  display: flex;
+  justify-content: right;
+}
+.newpost_enlace {
+  padding: 15px 30px;
+  border-radius: 5%;
+  align-items: center;
+  background-color: #6320ee;
+  color: #fff;
+}

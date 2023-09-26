@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+/* Estilos BEM */
+* {
+  font-family: "Roboto", sans-serif;
+}
+.title2,
+.title {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form {
+  margin: 20px;
+}
+
+.form__field {
+  margin-bottom: 10px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form__input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 500px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+.contenedor-botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px 0px;
+}
+.form__submit {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+input[type="submit"] {
+    font-size: 16px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+  }
+.editar {
+  background-color: #00a878;
+}
+.volver {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: #d00000;
+}
